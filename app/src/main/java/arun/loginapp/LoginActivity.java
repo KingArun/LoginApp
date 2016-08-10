@@ -35,7 +35,10 @@ public class LoginActivity extends Activity {
                 if (!isValidPassword(pass)) {
                     passEditText.setError("Invalid Password");
                 }
-                onButtonClick(arg0);
+                if(isValidEmail(email)&&isValidPassword(pass))
+                {
+                    onButtonClick(arg0);
+                }
 
             }
         });
